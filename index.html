@@ -3,14 +3,56 @@
 		<link rel="stylesheet" href="./CSS/reset.css">
 		<link rel="stylesheet" href="./CSS/Base.css">
 		<link rel="stylesheet" href="./CSS/index.css">
+		<link rel="stylesheet" href="./CSS/component.css">
+		<link rel="stylesheet" href="./CSS/demo.css">
 	</head>
 	<body>
 		<div id="main">
-			 <div class='transparency'></div>
-			<!-- <img src="./Resources/Pics/DSC_5869 copy.jpg" class="full"> -->
+			<div class='transparency'></div>
 			<div class="content">
-				<h1>Reagan &amp; Alex</h1>
+				<p class="gold-text">Reagan &amp; Alex</p>
+				<nav class="menu menu--alonso">
+					<ul class="menu__list">
+						<li class="menu__item menu__item--current">
+							<a href="#" class="menu__link">Home</a>
+						</li>
+						<li class="menu__item">
+							<a href="#" class="menu__link">Info</a>
+						</li>
+						<li class="menu__item">
+							<a href="#" class="menu__link">Registry</a>
+						</li>
+						<li class="menu__line"></li>
+					</ul>
+				</nav>
 			</div>
 		</div>
+		<script src="./js/classie.js" type="text/javascript"></script>
+		<script type=text/javascript>
+
+			[].slice.call(document.querySelectorAll('.menu')).forEach(function(menu) {
+				var menuItems = menu.querySelectorAll('.menu__link'),
+					setCurrent = function(ev) {
+						ev.preventDefault();
+
+						var item = ev.target.parentNode; // li
+
+						// return if already current
+						if (classie.has(item, 'menu__item--current')) {
+							return false;
+						}
+						// remove current
+						classie.remove(menu.querySelector('.menu__item--current'), 'menu__item--current');
+						// set current
+						classie.add(item, 'menu__item--current');
+					};
+
+				[].slice.call(menuItems).forEach(function(el) {
+					el.addEventListener('click', setCurrent);
+				});
+			});
+
+
+		</script>
 	</body>
 </html>
