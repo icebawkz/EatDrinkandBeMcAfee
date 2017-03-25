@@ -42,3 +42,29 @@ body{
     background: -o-linear-gradient(transparent, transparent);
     -webkit-background-clip: text;
 }
+
+.hidden-slide{
+  display: none;
+}
+
+.tall-slide{
+  height: 100%;
+}
+
+.wide-slide{
+  width: 100%;
+}
+
+.carousel-border{
+  width: 90%;
+  height: 70%;
+}
+
+.slide{
+  box-shadow: 0 0 5px rgba(0,0,0,.25);
+}
+
+#carousel{
+  display: flex;
+  justify-content: center;
+}
