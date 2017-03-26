@@ -18,23 +18,44 @@ class Carousel {
     }.bind(this)
     xhr.send();
 
+    const leftArrows = document.getElementsByClassName('carousel-arrow-left')
+    const rightArrows = document.getElementsByClassName('carousel-arrow-right')
+
+    if (!!leftArrows){
+      for (const arrow of leftArrows)
+        arrow.onclick = this.previousSlide.bind(this)
+    }
+
+    if (!!rightArrows){
+      for (const arrow of rightArrows)
+        arrow.onclick = this.nextSlide.bind(this)
+    }
+
     this.run()
   }
 
   nextSlide() {
     let slideIndex = this.slideIndex
 
-    this.slides[slideIndex].classList.remove('tall-slide')
-    this.slides[slideIndex].classList.remove('wide-slide')
     this.slides[slideIndex].classList.add('hidden-slide')
-    slideIndex = (slideIndex +  1) % this.slides.length;
+    this.slides[slideIndex].classList.remove('current-slide')
+    slideIndex = (slideIndex + 1) % this.slides.length;
     this.slides[slideIndex].classList.remove('hidden-slide')
-    if (this.slides[slideIndex].naturalWidth < this.slides[slideIndex].naturalHeight)
-      this.slides[slideIndex].classList.add('wide-slide')
-    else
-      this.slides[slideIndex].classList.add('tall-slide')
+    this.slides[slideIndex].classList.add('current-slide')
 
-      this.slideIndex = slideIndex
+    this.slideIndex = slideIndex
+  }
+
+  previousSlide() {
+    let slideIndex = this.slideIndex
+
+    this.slides[slideIndex].classList.add('hidden-slide')
+    this.slides[slideIndex].classList.remove('current-slide')
+    slideIndex = (slideIndex == 1) ? this.slides.length - 1 : slideIndex - 1 % this.slides.length;
+    this.slides[slideIndex].classList.remove('hidden-slide')
+    this.slides[slideIndex].classList.add('current-slide')
+
+    this.slideIndex = slideIndex
   }
 
   loadImages(htmlpage){
@@ -50,6 +71,6 @@ class Carousel {
   }
 
   run(){
-    setInterval(this.nextSlide.bind(this), 5000)
+    // setInterval(this.nextSlide.bind(this), 5000)
   }
 }
