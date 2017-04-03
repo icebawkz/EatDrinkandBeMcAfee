@@ -100,12 +100,12 @@
 
 .menu--alonso .menu__item:nth-child(4).menu__item--current ~ .menu__line {
 	-webkit-transform: translate3d(300%, 0, 0);
-	transform: translate3d(300%, 0, 0);
+	transform: translate3d(600%, 0, 0);
 }
 
 .menu--alonso .menu__item:nth-child(5).menu__item--current ~ .menu__line {
 	-webkit-transform: translate3d(400%, 0, 0);
-	transform: translate3d(400%, 0, 0);
+	transform: translate3d(800%, 0, 0);
 }
 
 @media screen and (max-width:55em) {
