@@ -9,6 +9,8 @@
 	<body>
 		<div id="main">
 			<div class="content">
+
+				<!-- Navigation Menu -->
 				<nav class="menu menu--alonso">
 					<ul class="menu__list">
 						<li class="menu__item">
@@ -26,9 +28,22 @@
 						<li class="menu__line"></li>
 					</ul>
 				</nav>
-			</div>
+
+				<!-- Photo Container -->
+
+				<div class="carousel-border">
+					<p class='carousel-arrow carousel-arrow-left'>&#10094;</pt>
+					<div id='carousel'></div>
+					<p class='carousel-arrow carousel-arrow-right'>&#10095;</pt>
+				</div>
 		</div>
 		<script src="./js/classie.js" type="text/javascript"></script>
 		<script src="./js/action.js" type="text/javascript"></script>
+		<script src="./js/menu.js" type="text/javascript"></script>
+		<script src="./js/Carousel.js" type="text/javascript"></script>
+		<script type=text/javascript>
+			const c = new Carousel('carousel', './Resources/Pics');
+			c.loadImages()
+		</script>
 	</body>
 </html>
