@@ -31,11 +31,18 @@ class Carousel {
         arrow.onclick = this.nextSlide.bind(this)
     }
 
+    document.onkeydown = function (event) {
+      if (event.keyCode == 37)
+         this.previousSlide()
+      else if (event.keyCode == 39)
+          this.nextSlide()
+    }.bind(this);
     this.run()
   }
 
   nextSlide() {
     let slideIndex = this.slideIndex
+    document.getElementById('carousel-background').style.backgroundImage = `url(${this.slides[this.slideIndex].src})`
 
     this.slides[slideIndex].classList.add('hidden-slide')
     this.slides[slideIndex].classList.remove('current-slide')
@@ -43,11 +50,13 @@ class Carousel {
     this.slides[slideIndex].classList.remove('hidden-slide')
     this.slides[slideIndex].classList.add('current-slide')
 
+
     this.slideIndex = slideIndex
   }
 
   previousSlide() {
     let slideIndex = this.slideIndex
+    document.getElementById('carousel-background').style.backgroundImage = `url(${this.slides[this.slideIndex].src})`
 
     this.slides[slideIndex].classList.add('hidden-slide')
     this.slides[slideIndex].classList.remove('current-slide')
@@ -71,6 +80,8 @@ class Carousel {
   }
 
   run(){
+
     // setInterval(this.nextSlide.bind(this), 5000)
+    // document.getElementById('carousel-background'
   }
 }

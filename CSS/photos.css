@@ -63,7 +63,8 @@ body{
 }
 
 .slide{
-  box-shadow: 0 0 5px rgba(0,0,0,.25);
+  /*box-shadow: 0 0 5px rgba(0,0,0,.25);*/
+   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
 
 #carousel{
@@ -89,4 +90,16 @@ body{
 
 .carousel-arrow-right{
   right: 0;
+}
+
+#carousel-background{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: blur(6px) saturate(.25);
 }
