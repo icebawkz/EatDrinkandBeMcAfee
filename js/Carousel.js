@@ -68,7 +68,7 @@ class Carousel {
   }
 
   loadImages(htmlpage){
-    var regex = /href="([A-Za-z]*_[0-9]*.jpg)/gi
+    var regex = /href="(.*?.jpg)/gi
     var match, matches = []
     while ((match = regex.exec(htmlpage)) != null) {
       let img = document.createElement("img")
