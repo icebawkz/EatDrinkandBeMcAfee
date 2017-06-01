@@ -27,7 +27,7 @@ body{
 
 .left_div {
   display: flex;
-  width: 50%;
+  width: 20%;
   flex-flow: column;
   padding-right: 5%;
   padding-left: 10%;
@@ -39,7 +39,7 @@ body{
 
 .right_div {
   display: flex;
-  width: 50%;
+  width: 20%;
   flex-flow: column;
   padding-left: 5%;
   padding-right: 10%;

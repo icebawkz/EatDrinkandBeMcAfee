@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+}
+
+.column {
+  display: flex;
+  width: 50%;
+  flex-flow: column;
+  padding-right: 5%;
+  padding-left: 10%;
+  justify-content: flex-start;
+  text-align: center;
+  color: #b5b5b5;
+}
