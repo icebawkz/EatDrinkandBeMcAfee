@@ -11,8 +11,7 @@
   display: flex;
   width: 50%;
   flex-flow: column;
-  padding-right: 5%;
-  padding-left: 10%;
+  padding: 0 7%;
   justify-content: flex-start;
   text-align: center;
   color: #b5b5b5;
@@ -30,20 +29,18 @@
     -webkit-background-clip: text;
 }
 
-.transparency{
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  background-image: radial-gradient(at 50%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .75));
-  z-index: 0;
-}
-
 h1 {
   font-size: 5em !important;
 }
 
+h2 {
+  color: #d94f5c;
+}
+
 b {
   font-weight: bold;
+}
+
+.it {
+  font-style: italic;
 }

@@ -4,6 +4,7 @@
   background: #232526; /* fallback for old browsers */
   background: -webkit-linear-gradient(to left, #232526 , #414345); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to left, #232526 , #414345); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  z-index: 5;
 }
 
 body{
@@ -27,7 +28,7 @@ body{
 
 .left_div {
   display: flex;
-  width: 20%;
+  width: 50%;
   flex-flow: column;
   padding-right: 5%;
   padding-left: 10%;
@@ -39,7 +40,7 @@ body{
 
 .right_div {
   display: flex;
-  width: 20%;
+  width: 50%;
   flex-flow: column;
   padding-left: 5%;
   padding-right: 10%;
@@ -55,4 +56,8 @@ body{
   flex-direction: row;
   height: 100%;
   font-size: 20px;
+}
+
+a.inline {
+  text-decoration: underline;
 }
