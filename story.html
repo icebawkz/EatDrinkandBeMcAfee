@@ -40,7 +40,15 @@
 		<script src="./js/classie.js" type="text/javascript"></script>
 		<script src="./js/action.js" type="text/javascript"></script>
 		<script>
-
+			Array.from(document.getElementsByClassName('img-circle')).forEach(
+				image => {
+					image.onmouseover = elt => {
+						const sibling = elt.target.parentNode.children[1]
+						sibling.style.display = "inline";
+						sibling.classList.add('visible')
+						elt.target.classList.add('revealed');
+					}
+				});
 		</script>
 	</body>
 </html>
