@@ -5,7 +5,7 @@
   margin: auto;
   z-index: 3;
   transition: all .3s;
-  margin-left: 36%;
+  margin-left: 39%;
 }
 
 .img-circle.revealed {
@@ -18,6 +18,8 @@
   overflow-x: hidden;
   position: relative;
   display: flex;
+  flex-flow: column;
+  background: linear-gradient(to left, #232526 , #414345);
 }
 
 .row {
@@ -35,10 +37,11 @@
   text-align: left;
   z-index: 1;
   align-self: center;
-  font-size: 2em;
+  font-size: 1.5em;
   width: 50%;
   opacity: 0;
   transition: all .3s;
+  color: #b5b5b5;
 }
 
 .text.visible {

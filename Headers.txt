@@ -1,0 +1,24 @@
+POST
+======
+-Route
+/rsvp
+
+-Headers
+Content-Type: Application/JSON
+Accept: Application/JSON
+
+-Request Body
+JSON object
+--Fields
+	FirstName string
+	LastName string
+	MealChoice int
+	RSVP bool
+
+-Response Body
+--Standard HTTP codes
+	201
+	400
+--Related Individuals
+	FirstName
+	LastName
