@@ -60,4 +60,5 @@ body{
 
 a.inline {
   text-decoration: underline;
+  z-index:5;
 }
