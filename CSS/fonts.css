@@ -1,0 +1,23 @@
+@font-face{
+	font-family: 'Blackjack';
+	src: url('../Resources/fonts/blackjack.otf');
+}
+
+@font-face{
+	font-family: 'Antonio';
+	src: url('../Resources/fonts/antonio.ttf');
+}
+
+h1, h2, h4 {
+  font-family: 'Blackjack', Arial, sans-serif;
+}
+
+h3, h5, p, a {
+  font-family: 'Antonio', Georgia, serif;
+}
+
+
+h1 {
+  font-size: 3em;
+  color: #ff6666;
+}

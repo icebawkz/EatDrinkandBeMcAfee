@@ -34,9 +34,10 @@ body{
 }
 
 .gold-text {
-    font-family: "Title", sans-serif;
+    /*font-family: "Blackjack", sans-serif;*/
     font-size: 9em;
-    padding: 10;
+    padding: 16px;
+    margin-bottom: 16px;
     color: #c3a343;
     -webkit-text-fill-color: transparent;
     background: -webkit-linear-gradient(transparent, transparent),

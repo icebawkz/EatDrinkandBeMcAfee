@@ -1,0 +1,156 @@
+section {
+  margin: 4% auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+}
+
+.name {
+  margin-top: 0;
+}
+
+.name input{
+  font-size: 20px;
+
+  outline: none;
+  background: none;
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
+  border-bottom: 4px solid #dadada;
+  transition: all 0.3s;
+
+  margin-top: 16px;
+  margin-left: 16px;
+  margin-right: 16px;
+  padding: 16px 10px 6px 10px;
+  color: #d94f5c;
+
+}
+
+.name input:focus{
+  flex: 1 0 auto;
+  background: none;
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
+  border-bottom: 4px solid #d94f5c;
+}
+
+.name input:focus + label{
+  color: #d94f5c;
+}
+
+.vertical-span {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  padding: 6px;
+  width: 30%;
+}
+
+.vertical-span label {
+  color: #dadada;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-top: 5px;
+  transition: all 0.3s;
+  font-weight: bolder;
+}
+
+.reservation-confirmation > button{
+  width: 25%;
+  margin: 10px 20px;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  outline: none;
+  border: 1px solid #dadada;
+  color: #dadada;
+  padding: 10px;
+  align-self: stretch;
+  font-weight: bolder;
+  transition: all 0.3s;
+  font-size: 0.75em;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 0px 6px rgba(0,0,0,0.23);
+  border-radius: 3px;
+}
+
+button:hover {
+  background: #dadada;
+  color: #d94f5c;
+}
+
+button.positive {
+  color: #d94f5c;
+  border: 1px solid #d94f5c;
+}
+
+button.positive:hover {
+  background: #d94f5c;
+  color: #dadada;
+}
+
+button:active {
+  box-shadow: none;
+}
+
+.dinner-selection {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 8px 16px;
+}
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #666;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #F87DA9;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
