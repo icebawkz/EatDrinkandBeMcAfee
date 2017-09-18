@@ -1,0 +1,64 @@
+#main {
+  height: 100%;
+  width: 100%;
+  background: #232526; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #232526 , #414345); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #232526 , #414345); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  z-index: 5;
+}
+
+body{
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.logo {
+  height: 300px;
+}
+
+.content {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+}
+
+.left_div {
+  display: flex;
+  width: 50%;
+  flex-flow: column;
+  padding-right: 5%;
+  padding-left: 10%;
+  justify-content: flex-start;
+  align-items: flex-end;
+  text-align: right;
+  color: #b5b5b5;
+}
+
+.right_div {
+  display: flex;
+  width: 50%;
+  flex-flow: column;
+  padding-left: 5%;
+  padding-right: 10%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: #b5b5b5;
+}
+
+.container {
+  display: flex;
+  flex-flow: row nowrap;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  height: 100%;
+  font-size: 20px;
+}
+
+a.inline {
+  text-decoration: underline;
+  z-index:5;
+}
