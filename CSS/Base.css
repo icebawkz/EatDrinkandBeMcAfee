@@ -3,6 +3,11 @@
   src: url(../Resources/AlexBrush-Regular.ttf);
 }
 
+@font-face {
+  font-family: "Copy";
+  src: url(../Resources/abel-regular.ttf);
+}
+
 #main {
   height: 100%;
   width: 100%;
@@ -17,6 +22,7 @@ body{
   width: 100vw;
   overflow-y: scroll;
   overflow-x: hidden;
+  font-family: "Copy", serif; 
 }
 
 .content {
