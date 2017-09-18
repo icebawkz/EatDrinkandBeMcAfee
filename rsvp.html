@@ -1,0 +1,62 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="CSS/reset.css">
+  <link rel="stylesheet" type="text/css" href="CSS/Base.css">
+  <link rel="stylesheet" type="text/css" href="CSS/rsvp.css">
+  <link rel="stylesheet" type="text/css" href="CSS/inputs.css">
+</head>
+<body>
+  <form class="form-container">
+    <section>
+      <h3 class="gold-text"> Who is responding?  </h3>
+      <div id="name">
+        <span class="input_span">
+          <input id="first_name" name="first_name" class="input_box"></input>
+          <label for="first_name" class="input_label"> First Name </input>
+        </span>
+        <span class="input_span">
+          <input id="last_name" name="last_name" class="input_box"></input>
+          <label for="last_name" class="input_label"> Last Name </input>
+        </span>
+      </div>
+  </section>
+  <section>
+    <h3 class="gold-text"> Will you be attending? </h3>
+    <div id="availability" class="radio_group_container">
+      <div class="radio_container">
+        <input id="availability_yes" type="radio" name="availability" value="yes" checked>
+        <label class="radio_label" for="availability" ><span><span></span></span>Joyfully Accept</label>
+      </div>
+      <div class="radio_container" >
+        <input id="availability_no" type="radio" name="availability" value="no">
+        <label class="radio_label" for="availability"><span><span></span></span>Regretfully Decline</label>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h3 class="gold-text"> Choice of Dinner? </h3>
+    <h6 class="gold-text"> All entrees will be preceded by a Caesar Salad, topped with Pomegranate  Seeds &amp; a Parmesan Crisp </h6>
+    <div id="food_choice" class="radio_group_container">
+      <div class="radio_container">
+        <input id="food_steak" type="radio" name="food" value="steak" checked>
+        <label class="radio_label" for="food"><span><span></span></span>Bacon Wrapped Filet Mignon, Wild Mushroom Sauce &amp; Roasted Garlic Mashed Potatoes</label>
+      </div>
+      <div class="radio_container">
+        <input id="food_chicken" type="radio" name="food" value="chicken">
+        <label class="radio_label" for="food"><span><span></span></span>Grilled Napa Style Breast of Chicken, Citrus Cream &amp; Saffron-Vegetable Risotto</label>
+      </div>
+      <div class="radio_container">
+        <input id="food_fish" type="radio" name="food" value="fish">
+        <label class="radio_label" for="food"><span><span></span></span>Spicy Glazed Salmon, Twice Cooked Beans &amp; Cilantro Accented Rice</label>
+      </div>
+    </div>
+    </section>  
+    <div id="submit">
+      <button class='button colored-button'> Cancel </button>
+      <button id="submit" class='button full-colored-button'> Submit </button>
+    </div>
+  </form>
+
+  <script type=text/javascript src="js/rsvp.js"></script>
+</body>
+</html>
