@@ -2,29 +2,38 @@ package main
 
 import (
 	"fmt"
+	"os"
+	"io/ioutil"
 	"net/http"
 )
 
-type rsvp_struct struct {
-	Name   []string `json:"name"`
-	Inches []string `json:"inches"`
+type rsvp struct {
+	Name string `json:name`
+	Available string `json:available`
+	Food string `json:food`
 }
 
-func rsvp(rw http.ResponseWriter, req *http.Request) {
-	fmt.Println("Hello from func")
+func handleRSVP(rw http.ResponseWriter, req *http.Request) {
 	if req.Method == "POST" {
-		fmt.Println("Received a POST")
-		req.ParseForm()
-		fmt.Println(req.Form)
 
+		f, err := os.OpenFile("results.csv", os.O_WRONLY | os.O_CREATE | os.O_TRUNC, 0777)
+		if err != nil {
+		    panic(err)
+		}
+		defer f.Close()
+
+		responseData, err := ioutil.ReadAll(req.Body)
+		fmt.Println(string(responseData))
+		f.Write(responseData)
+		rw.WriteHeader(http.StatusCreated)
+    rw.Write([]byte("201 - Created"))
 	} else {
-		fmt.Println(req.URL.Path[1:])
-		http.ServeFile(rw, req, "./static/rsvp.html")
+		http.ServeFile(rw, req, "./rsvp.html")
 	}
 }
 
 func main() {
 	http.Handle("/", http.FileServer(http.Dir("./static")))
-	http.HandleFunc("/rsvp", rsvp)
+	http.HandleFunc("/rsvp", handleRSVP)
 	http.ListenAndServe(":3000", nil)
 }
