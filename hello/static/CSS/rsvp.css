@@ -9,6 +9,7 @@ body {
     font-family: "Title", sans-serif;
     font-size: 3em;
     padding: 10;
+    text-align: center;
     color: #c3a343;
     -webkit-text-fill-color: transparent;
     background: -webkit-linear-gradient(transparent, transparent),
@@ -55,4 +56,5 @@ h6.gold-text {
 
 #food_choice {
   flex-flow: column nowrap;
+  align-items: center;
 }
