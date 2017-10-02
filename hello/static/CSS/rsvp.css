@@ -3,6 +3,11 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 .gold-text {
@@ -33,13 +38,14 @@ h6.gold-text {
   justify-content: space-around;
   background: rgba(33, 33, 33, 0.9);
   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  padding: 0 3em;
 }
 
 .form-container > section > div {
   display: flex;
   flex-flow: row nowrap;
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 .form-container > .radio_group_container {
@@ -51,7 +57,7 @@ h6.gold-text {
 
 #name, #submit {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 #food_choice {
