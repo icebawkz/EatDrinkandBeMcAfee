@@ -42,6 +42,7 @@ function submit(){
         } else {
           console.log("Thank you for deciding to join us in our celebration")
         }
+		window.location.href = 'confirm.html'
       } else {
         console.log('Fuuuuuuck')
       }
